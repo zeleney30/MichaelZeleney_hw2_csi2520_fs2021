@@ -1,6 +1,7 @@
 body
 {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0.178);
 }
 
 #nav_bar
@@ -40,7 +41,7 @@ body
 
 .nav_link:hover
 {
-    background-color: rgba(21, 76, 128, 0.685);
+    background-color: rgba(20, 76, 126, 0.685);
 }
 
 #page_title
