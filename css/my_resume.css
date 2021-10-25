@@ -1,0 +1,128 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav_bar
+{
+    
+}
+
+#nav_list
+{
+    position: fixed;
+    list-style-type: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(30, 116, 196, 0.685);
+    border-bottom: 1px solid black;
+}
+
+.nav_list_element
+{
+    float: left;
+    display: inline;
+}
+
+.nav_link
+{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav_link:hover
+{
+    background-color: rgba(21, 76, 128, 0.685);
+}
+
+#page_title
+{
+    margin-top: 65px;
+    text-align: center;
+    font-size: 42px;
+}
+
+#contact_information
+{
+    text-align: center;
+    font-size: 28px;
+}
+
+#main_content
+{
+    margin-left: 15%;
+}
+
+h3
+{
+    font-size: 24px;
+}
+
+#h3_objective
+{
+    border-bottom: 1px solid rgb(63, 63, 63);
+    width: 110px;
+}
+
+#h3_personal
+{
+    border-bottom: 1px solid rgb(63, 63, 63);
+    width: 237px;
+}
+
+#h3_education
+{
+    border-bottom: 1px solid rgb(63, 63, 63);
+    width: 253px;
+}
+
+#h3_extra
+{
+    border-bottom: 1px solid rgb(63, 63, 63);
+    width: 430px;
+}
+
+h4
+{
+    font-size: 17px;
+}
+
+#section_objective
+{
+    padding-bottom: 5px;
+}
+
+#section_experience
+{
+    padding-bottom: 5px;
+}
+
+#section_education
+{
+    padding-bottom: 25px;
+}
+
+#section_extracurricular
+{
+    padding-bottom: 25px;
+}
+
+#table_education
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+hr
+{
+    border-top: 0;
+    border-bottom: 1px solid black;
+}

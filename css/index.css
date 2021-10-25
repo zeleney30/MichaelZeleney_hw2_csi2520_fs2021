@@ -1,0 +1,101 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav_bar
+{
+    
+}
+
+#nav_list
+{
+    position: fixed;
+    list-style-type: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(30, 116, 196, 0.685);
+    border-bottom: 1px solid black;
+}
+
+.nav_list_element
+{
+    float: left;
+    display: inline;
+}
+
+.nav_link
+{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav_link:hover
+{
+    background-color: rgba(21, 76, 128, 0.685);
+}
+
+#page_title
+{
+    margin-top: 65px;
+    text-align: center;
+    font-size: 42px;
+}
+
+#img_self
+{
+    width: 250px;
+}
+
+.quote
+{
+    font-style: italic;
+    font-size: 18px;
+}
+
+#main_content
+{
+    text-align: center;
+}
+
+#section_introduction article
+{
+    margin-left: 10%;
+    margin-top: 25px;
+    margin-right: 10%;
+    margin-bottom: 25px;
+    border: 1px solid black;
+    border-radius: 9px;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+}
+
+#progress_title
+{
+    text-align: center;
+}
+
+#progress_to_degree
+{
+    margin-left: 40%;
+    width: 20%;
+    border-radius: 0px;
+    border: 1px solid black;
+    margin-bottom: 25px;
+}
+
+hr
+{
+    border-top: 0;
+    border-bottom: 1px solid black;
+}

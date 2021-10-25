@@ -6,7 +6,10 @@
         <meta name="keywords" content="Portfolio, Michael Zeleney">
         <meta name="author" content="Michael Zeleney">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
+
+        <link rel="stylesheet" href="./css/index.css">
 
         <title>Michael Zeleney's Portfolio</title>
     </head>
@@ -14,20 +17,20 @@
     <body>
         <header id="page_header">
             <nav id="nav_bar">
-                <ul>
-                    <il><a href="index.html">Home</a></il>
-                    <il><a href="html/my_resume.html">Resume</a></il>
-                    <il><a href="html/my_fun_facts.html">Fun Facts</a></il>
+                <ul id="nav_list">
+                    <il class="nav_list_element"><a href="index.html" class="nav_link">Home</a></il>
+                    <il class="nav_list_element"><a href="html/my_resume.html" class="nav_link">Resume</a></il>
+                    <il class="nav_list_element"><a href="html/my_fun_facts.html" class="nav_link">Fun Facts</a></il>
                 </ul>
             </nav>
 
-            <h1>Michael Zeleney's Portfolio Website</h1>
+            <h1 id="page_title">Michael Zeleney's Portfolio Website</h1>
         </header>
 
         <main id="main_content">
-            <img src="img/me.jpg" width="10%" alt="A picture of Michael Zeleney">
+            <img src="img/me.jpg" alt="A picture of Michael Zeleney." id="img_self">
 
-            <blockquote>"You miss 100 percent of the shots you never take" -Wayne Gretzky</blockquote>
+            <blockquote class="quote">"You miss 100 percent of the shots you never take" -Wayne Gretzky</blockquote>
         </main>
 
         <section id="section_introduction">
@@ -39,10 +42,10 @@
                      Apart from that, I really enjoy working on computers and coding so I would like to become a developer, I enjoy video games so I thought about the possibility of game development, but im not quite sure where I want to end up yet.
                      To find out more about me checkout my <a href="html/my_resume.html">Resume</a> or <a href="html/my_fun_facts.html">Fun Facts</a> about me pages.
                 </p>
-
-                <h2>Progress to Degree</h2>
-                <progress id="progress_to_degree" min=0 max=130 value=94>94</progress>
             </article>
+
+            <h2 id="progress_title">Progress to Degree</h2>
+            <progress id="progress_to_degree" min=0 max=130 value=94>94</progress>
         </section>
 
         <footer id="page_footer">
@@ -51,7 +54,7 @@
             <address>
                 MichaelZeleney@oakland.edu
                 <br>
-                2698 Davison Ave, Auburn hills, MI 48326
+                1234 Street, City, State 12345
             </address>
         </footer>
     </body>
