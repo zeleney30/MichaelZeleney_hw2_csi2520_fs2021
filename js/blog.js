@@ -57,8 +57,8 @@ function postComment()
     newComment.innerText = commenter + document.getElementById('comment_text').value;
 
     document.getElementById("comments").append(newComment);
-    document.getElementById("comments").append(replyButton);
     document.getElementById("comments").append(replyDiv);
+    document.getElementById("comments").append(replyButton);
 }
 
 let replyBoxID = 0;
