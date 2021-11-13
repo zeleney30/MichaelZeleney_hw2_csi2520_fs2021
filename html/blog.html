@@ -11,6 +11,8 @@
 
         <link rel="stylesheet" href="../css/blog.css">
 
+        <script src="../js/blog.js" defer></script>
+
         <title>Michael Zeleney's Portfolio</title>
     </head>
 
@@ -24,7 +26,7 @@
             </ul>
         </nav>
 
-        <h1 id="page_title">Blog</h1>
+        <h1 id="page_title">Michael's Blog</h1>
     </header>
 
     <main id="main_content">
@@ -39,7 +41,14 @@
 
         <hr>
 
-        <button id="button_comment">Add/Leave A Comment</button>
+        <button id="button_comment" type="button" onclick="addComment()">Add/Leave A Comment</button>
+        <br>
+        <textarea id="comment_text"></textarea>
+        <button id="button_post" type="button" onclick="postComment()">Post Comment</button>
+        
+        <div id="comments">
+
+        </div>
     </main>
 
     <footer id="page_footer">
