@@ -1,25 +1,25 @@
 let commentText = document.getElementById("comment_text");
 let buttonPost = document.getElementById("button_post");
 
-let visibility = "hidden";
+let commentVisibility = "hidden";
 
 function addComment()
 {
-    if (visibility == "hidden")
+    if (commentVisibility == "hidden")
     {
-        visibility = "visible"
+        commentVisibility = "visible"
         commentText.style.height = "350px";
         buttonPost.style.height = "25px";
     }
     else
     {
-        visibility = "hidden";
+        commentVisibility = "hidden";
         commentText.style.height = "0px";
         buttonPost.style.height = "0px"
     }
 
-    commentText.style.visibility = visibility;
-    buttonPost.style.visibility = visibility;
+    commentText.style.visibility = commentVisibility;
+    buttonPost.style.visibility = commentVisibility;
 }
 
 let commentCount = 0;
@@ -57,46 +57,53 @@ function postComment()
     newComment.innerText = commenter + document.getElementById('comment_text').value;
 
     document.getElementById("comments").append(newComment);
-    document.getElementById("comments").append(replyDiv);
     document.getElementById("comments").append(replyButton);
+    document.getElementById("comments").append(replyDiv);
 }
 
 let replyBoxID = 0;
 
+let isReplyOpen = false;
+
 function getReply(x)
 {
-    replyBoxID++;
+    if (isReplyOpen)
+        return;
+    else
+        isReplyOpen = true;
 
+    let divReply = document.getElementById("divReply" + x);
     let replyButton = document.getElementById("buttonReply" + x);
-    replyButton.style.visibility = "hidden";
-    replyButton.style.height = 0;
-    replyButton.style.marginBottom = "0px";
 
     let replyText = document.createElement("textarea");
+    let postReplyButton = document.createElement("button");   
+
+    replyBoxID++;
+
     replyText.id = "replyText" + replyBoxID;
-    replyText.style.marginLeft = "17%";
+    replyText.style.marginLeft = "20%";
     replyText.style.width = "35%";
     replyText.style.height = "70px";
     replyText.style.resize = "none";
 
-    let postReplyButton = document.createElement("button");
     postReplyButton.id = "postReply" + replyBoxID;
     postReplyButton.style.marginLeft = "1%";
     postReplyButton.innerText = "Post Reply";
     postReplyButton.style.height = "25px";
+
     postReplyButton.setAttribute("onclick", "postReply(" + replyBoxID + ", " + x + ")");
 
-    document.getElementById("divReply" + x).append(replyText);
-    document.getElementById("divReply" + x).append(postReplyButton);
+    divReply.append(replyText);
+    divReply.append(postReplyButton);
 }
 
 let replyCount = 0;
 
 function postReply(z, x)
 {
+    isReplyOpen = false;
+    
     let replyButton = document.getElementById("buttonReply" + x);
-    replyButton.style.visibility = "visible";
-    replyButton.style.height = "25px";
 
     let replyText = document.getElementById("replyText" + z);
     replyText.style.visibility = "hidden";
