@@ -59,6 +59,12 @@ function postComment()
     document.getElementById("comments").append(newComment);
     document.getElementById("comments").append(replyButton);
     document.getElementById("comments").append(replyDiv);
+
+    commentText.style.visibility = "hidden";
+    buttonPost.style.visibility = "hidden";
+    commentText.style.height = "0px";
+    buttonPost.style.height = "0px"
+    commentVisibility = "hidden";
 }
 
 let replyBoxID = 0;
