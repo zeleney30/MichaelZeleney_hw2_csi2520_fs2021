@@ -8,7 +8,7 @@ function addComment()
     if (commentVisibility == "hidden")
     {
         commentVisibility = "visible"
-        commentText.style.height = "350px";
+        commentText.style.height = "150px";
         buttonPost.style.height = "25px";
     }
     else
@@ -63,30 +63,27 @@ function postComment()
 
 let replyBoxID = 0;
 
-let isReplyOpen = false;
+let replyText = document.createElement("textarea");
+let postReplyButton = document.createElement("button");
 
 function getReply(x)
 {
-    if (isReplyOpen)
-        return;
-    else
-        isReplyOpen = true;
-
     let divReply = document.getElementById("divReply" + x);
     let replyButton = document.getElementById("buttonReply" + x);
 
-    let replyText = document.createElement("textarea");
-    let postReplyButton = document.createElement("button");   
+    replyText.value = "";
 
     replyBoxID++;
 
     replyText.id = "replyText" + replyBoxID;
+    replyText.style.visibility = "visible";
     replyText.style.marginLeft = "20%";
     replyText.style.width = "35%";
-    replyText.style.height = "70px";
+    replyText.style.height = "50px";
     replyText.style.resize = "none";
 
     postReplyButton.id = "postReply" + replyBoxID;
+    postReplyButton.style.visibility = "visible";
     postReplyButton.style.marginLeft = "1%";
     postReplyButton.innerText = "Post Reply";
     postReplyButton.style.height = "25px";
@@ -101,17 +98,8 @@ let replyCount = 0;
 
 function postReply(z, x)
 {
-    isReplyOpen = false;
-    
-    let replyButton = document.getElementById("buttonReply" + x);
-
     let replyText = document.getElementById("replyText" + z);
-    replyText.style.visibility = "hidden";
-    replyText.style.height = "0px";
-
     let postReplyButton = document.getElementById("postReply" + z);
-    postReplyButton.style.visibility = "hidden";
-    postReplyButton.style.height = "0px";
 
     let newReply = document.createElement("p");
     newReply.style.marginLeft = "20%";
@@ -125,4 +113,7 @@ function postReply(z, x)
     newReply.innerText = reply + document.getElementById("replyText" + z).value;
 
     document.getElementById("divReply" + x).append(newReply);
+
+    replyText.parentNode.removeChild(replyText);
+    postReplyButton.parentNode.removeChild(postReplyButton);
 }
