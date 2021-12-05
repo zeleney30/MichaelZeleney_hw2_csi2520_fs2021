@@ -50,3 +50,30 @@ body
     text-align: center;
     font-size: 42px;
 }
+
+#triviaResults
+{
+    visibility: hidden;
+}
+
+#button_comment
+{
+    width: 225px;
+    height: 25px;
+}
+
+#comment_text
+{
+    visibility: hidden;
+    width: 40%;
+    height: 0px;
+    margin-left: 30%;
+    resize: none;
+}
+
+#button_post
+{
+    visibility: hidden;
+    margin-left: 71%;
+    height: 0px;
+}

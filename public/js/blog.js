@@ -65,6 +65,8 @@ function postComment()
     commentText.style.height = "0px";
     buttonPost.style.height = "0px"
     commentVisibility = "hidden";
+
+    commentText.value = "";
 }
 
 let replyBoxID = 0;

@@ -11,6 +11,8 @@
 
         <link rel="stylesheet" href="/public/css/trivia.css">
 
+        <script src="../public/js/trivia.js" defer></script>
+
         <title>Michael Zeleney's Portfolio</title>
     </head>
 
@@ -37,7 +39,7 @@
                 C: Salvador Dali <br>
                 D: Pablo Picasso <br>
             </p>
-            <input style="text-transform: uppercase;" type="text" name="Question1" placeholder="A, B, C, D">
+            <input style="text-transform: uppercase;" type="text" name="Question1" id="Question1" placeholder="A, B, C, D">
 
             <br>
 
@@ -48,7 +50,7 @@
                 C: December, January, February <br>
                 D: January, February, March <br>
             </p>
-            <input style="text-transform: uppercase;" type="text" name="Question2" placeholder="A, B, C, D">
+            <input style="text-transform: uppercase;" type="text" name="Question2" id="Question2" placeholder="A, B, C, D">
 
             <br>
 
@@ -59,30 +61,49 @@
                 C: Shamrock <br>
                 D: Thistle <br>
             </p>
-            <input style="text-transform: uppercase;" type="text" name="Question3" placeholder="A, B, C, D">
+            <input style="text-transform: uppercase;" type="text" name="Question3" id="Question3" placeholder="A, B, C, D">
 
             <br>
             
             <p>
-                4. What is the national flower/emblem of Ireland? <br>
-                A: Daffodil <br>
-                B: Rose <br>
-                C: Shamrock <br>
-                D: Thistle <br>
+                4. What is it called when animals sleep during the winter? <br>
+                A: Acclimatization <br>
+                B: Intervisitation <br>
+                C: Migration <br>
+                D: Hibernation <br>
             </p>
-            <input style="text-transform: uppercase;" type="text" name="Question3" placeholder="A, B, C, D">
+            <input style="text-transform: uppercase;" type="text" name="Question4" id="Question4" placeholder="A, B, C, D">
 
             <br>
             
             <p>
                 5. Which actor played the Grinch? <br>
                 A: Adam Sandler <br>
-                B: Will Ferrell <br>
-                C: Jim Carrey <br>
+                B: Jim Carrey <br>
+                C: Will Ferrell <br>
                 D: Ben Stiller <br>
             </p>
-            <input style="text-transform: uppercase;" type="text" name="Question3" placeholder="A, B, C, D">
+            <input style="text-transform: uppercase;" type="text" name="Question5" id="Question5" placeholder="A, B, C, D">
+
+            <br><br>
+            <input type="button" name="TriviaSubmit" value="Submit" onclick="CheckResults()">
         </form>
+
+        <div id="triviaResults">
+            <h2>Results:</h2>
+            <p id="numCorrect"></p>
+        </div>
+
+        <hr>
+
+        <button id="button_comment" type="button" onclick="addComment()">Add/Leave A Comment</button>
+        <br>
+        <textarea id="comment_text"></textarea>
+        <button id="button_post" type="button" onclick="postComment()">Post Comment</button>
+
+        <div id="comments">
+
+        </div>
     </main>
 
     <footer>
